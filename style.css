@@ -1,0 +1,672 @@
+/*
+Theme Name: bebop
+Theme URI: http://underscores.me/
+Author: Underscores.me
+Author URI: http://underscores.me/
+Description: Description
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: bebop
+GitHub Theme URI: https://github.com/aup2015/bebop
+GitHub Branch:    master
+Tags:
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+
+bebop is based on Underscores http://underscores.me/, (C) 2012-2015 Automattic, Inc.
+
+Normalizing styles have been helped along thanks to the fine work of
+Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
+*/
+
+.row.featurette {
+    padding: 50px;
+}
+
+/* header mods */
+
+.lead-heading {
+    margin-top: 30%;
+}
+
+/* START scrollr.js */
+
+
+	html, body {
+		height:100%;
+	}
+	.skrollr-desktop body {
+		height:100% !important;
+	}
+
+	.parallax-image-wrapper {
+		position:fixed;
+		left:0;
+		width:100%;
+		overflow:hidden;
+	}
+	.parallax-image-wrapper-50 {
+		height:50%;
+		top:-50%;
+	}
+	.parallax-image-wrapper-100 {
+		height:100%;
+		top:-100%;
+	}
+	.parallax-image {
+		display:none;
+		position:absolute;
+		bottom:0;
+		left:0;
+		width:100%;
+		background-repeat:no-repeat;
+		background-position:center;
+		background-size:cover;
+	}
+	.parallax-image-50 {
+		height:200%;
+		top:-50%;
+	}
+	.parallax-image-100 {
+		height:100%;
+		top:0;
+	}
+	.parallax-image.skrollable-between {
+		display:block;
+	}
+	.no-skrollr .parallax-image-wrapper {
+		display:none !important;
+	}
+	#skrollr-body {
+		height:100%;
+		overflow:visible;
+		position:relative;
+	}
+	.gap {
+		background:transparent center no-repeat;
+		background-size:cover;
+	}
+	.skrollr .gap {
+		background:transparent !important;
+	}
+	.gap-50 {
+		height:50%;
+	}
+	.gap-100 {
+		height:100%;
+	}
+	.header, .content {
+		background:#fff;
+		padding:1em;
+		-webkit-box-sizing:border-box;
+		-moz-box-sizing:border-box;
+		box-sizing:border-box;
+	}
+	.content-full {
+		height:100%;
+	}
+/* END scrollr.js */
+
+
+/* START Timeline */
+
+.timeline {
+    position: relative;
+    padding: 0;
+    list-style: none;
+}
+
+.timeline:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 40px;
+    width: 2px;
+    margin-left: -1.5px;
+    background-color: #f1f1f1;
+}
+
+.timeline>li {
+    position: relative;
+    margin-bottom: 50px;
+    min-height: 50px;
+}
+
+.timeline>li:before,
+.timeline>li:after {
+    content: " ";
+    display: table;
+}
+
+.timeline>li:after {
+    clear: both;
+}
+
+.timeline>li .timeline-panel {
+    float: right;
+    position: relative;
+    width: 100%;
+    padding: 0 20px 0 100px;
+    text-align: left;
+}
+
+.timeline>li .timeline-panel:before {
+    right: auto;
+    left: -15px;
+    border-right-width: 15px;
+    border-left-width: 0;
+}
+
+.timeline>li .timeline-panel:after {
+    right: auto;
+    left: -14px;
+    border-right-width: 14px;
+    border-left-width: 0;
+}
+
+.timeline>li .timeline-image {
+    z-index: 100;
+    position: absolute;
+    left: 0;
+    width: 80px;
+    height: 80px;
+    margin-left: 0;
+    border: 7px solid #f1f1f1;
+    border-radius: 100%;
+    text-align: center;
+    color: #fff;
+    background-color: #fed136;
+}
+
+.timeline>li .timeline-image h4 {
+    margin-top: 12px;
+    font-size: 10px;
+    line-height: 14px;
+}
+
+.timeline>li.timeline-inverted>.timeline-panel {
+    float: right;
+    padding: 0 20px 0 100px;
+    text-align: left;
+}
+
+.timeline>li.timeline-inverted>.timeline-panel:before {
+    right: auto;
+    left: -15px;
+    border-right-width: 15px;
+    border-left-width: 0;
+}
+
+.timeline>li.timeline-inverted>.timeline-panel:after {
+    right: auto;
+    left: -14px;
+    border-right-width: 14px;
+    border-left-width: 0;
+}
+
+.timeline>li:last-child {
+    margin-bottom: 0;
+}
+
+.timeline .timeline-heading h4 {
+    margin-top: 0;
+    color: inherit;
+}
+
+.timeline .timeline-heading h4.subheading {
+    text-transform: none;
+}
+
+.timeline .timeline-body>p,
+.timeline .timeline-body>ul {
+    margin-bottom: 0;
+}
+
+@media(min-width:768px) {
+    .timeline:before {
+        left: 50%;
+    }
+
+    .timeline>li {
+        margin-bottom: 100px;
+        min-height: 100px;
+    }
+
+    .timeline>li .timeline-panel {
+        float: left;
+        width: 41%;
+        padding: 0 20px 20px 30px;
+        text-align: right;
+    }
+
+    .timeline>li .timeline-image {
+        left: 50%;
+        width: 100px;
+        height: 100px;
+        margin-left: -50px;
+    }
+
+    .timeline>li .timeline-image h4 {
+        margin-top: 16px;
+        font-size: 13px;
+        line-height: 18px;
+    }
+
+    .timeline>li.timeline-inverted>.timeline-panel {
+        float: right;
+        padding: 0 30px 20px 20px;
+        text-align: left;
+    }
+}
+
+@media(min-width:992px) {
+    .timeline>li {
+        min-height: 150px;
+    }
+
+    .timeline>li .timeline-panel {
+        padding: 0 20px 20px;
+    }
+
+    .timeline>li .timeline-image {
+        width: 150px;
+        height: 150px;
+        margin-left: -75px;
+    }
+
+    .timeline>li .timeline-image h4 {
+        margin-top: 30px;
+        font-size: 18px;
+        line-height: 26px;
+    }
+
+    .timeline>li.timeline-inverted>.timeline-panel {
+        padding: 0 20px 20px;
+    }
+}
+
+@media(min-width:1200px) {
+    .timeline>li {
+        min-height: 170px;
+    }
+
+    .timeline>li .timeline-panel {
+        padding: 0 20px 20px 100px;
+    }
+
+    .timeline>li .timeline-image {
+        width: 170px;
+        height: 170px;
+        margin-left: -85px;
+    }
+
+    .timeline>li .timeline-image h4 {
+        margin-top: 40px;
+    }
+
+    .timeline>li.timeline-inverted>.timeline-panel {
+        padding: 0 100px 20px 20px;
+    }
+}
+
+/* END Timeline */
+
+/* Dark elements */
+
+.dark-text h1, .dark-text h2, .dark-text h3, .dark-text p {
+    color: #fff;
+}
+
+.dark-section {
+    background-color: #333;
+}
+
+/* START Project logo */
+
+.project-logo {
+    background:#fed136!important /* imp for override hover bootstrap funct */;
+    background-size:65px 65px;
+    position:absolute;
+    width:100px;
+    height:100px;
+    left:50%;
+    margin-left:-32px;
+    z-index:100;
+    display:block;
+    
+    -o-transform: translate(-50%, 0) rotate(-45deg);
+    -ms-transform: translate(-50%, 0) rotate(-45deg);
+    -moz-transform: translate(-50%, 0) rotate(-45deg);
+    -webkit-transform: translate(-50%, 0) rotate(-45deg);
+    transform: translate(-50%, 0) rotate(-45deg);
+}
+
+.parallax-overlay {
+    background-color:rgba(0,0,0,0.80);
+}
+
+
+/* ==== 7) Gallery ==== */
+
+#gallery-top {
+	background: url("../img/gallery_bg.jpg");
+}
+
+#gallery {
+	background: #fff;
+}
+
+#gallery .thumbnail {
+	background: transparent;
+	text-align: center;
+	position: relative;
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+
+.gallery-item {
+	padding: 0;
+}
+
+.gallery-overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	-webkit-transition: all 1s ease;
+	-moz-transition: all 1s ease;
+	-ms-transition: all 1s ease;
+	-o-transition: all 1s ease;
+	transition: all 1s ease;
+}
+
+.gallery-overlay:hover {
+	background: rgba(0, 0, 0, .4);
+}
+
+.gallery-overlay .gally-icon-gallery {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	right: 0;
+	-webkit-transform: translate(-50%, -50%);
+	-moz-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	width: 68px;
+	height: 68px;
+	display: inline-block;
+	fill: rgba(255, 255, 255, 0);
+	stroke: rgba(255, 255, 255, 1);
+	stroke-width: .05em;
+	stroke-opacity: 1;
+	stroke-linecap: butt;
+	stroke-linejoin: bevel;
+	stroke-dasharray: 0, 150;
+	-webkit-transition: fill 1.5s, stroke-dasharray .75s, stroke-opacity 1.5s ease;
+	-moz-transition: fill 1.5s, stroke-dasharray .75s, stroke-opacity 1.5s ease;
+	-ms-transition: fill 1.5s, stroke-dasharray .75s, stroke-opacity 1.5s ease;
+	-o-transition: fill 1.5s, stroke-dasharray .75s, stroke-opacity 1.5s ease;
+	transition: fill 1.5s, stroke-dasharray .75s, stroke-opacity 1.5s ease;
+}
+
+@media (max-width: 767px) {
+	.gally-icon-gallery {
+		width: 48px;
+		height: 48px;
+	}
+}
+
+.gallery-overlay:hover > .gally-icon-gallery {
+	fill: rgba(255, 255, 255, 1);
+	stroke-dasharray: 150, 1;
+	stroke-opacity: 0;
+}
+
+.gally-icon-gallery:after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+/* Secondary */
+
+#secondary {
+    visibility: hidden;
+    opacity: 0;
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    width: 300px;
+    z-index: 20;
+    background-color: #333;
+    height: 100vh;
+}
+
+/* DIS comments */
+
+#comments {
+    display: none;
+}
+/* DIS h1 header */
+.entry-title {
+    display: none;
+}
+
+/* Temp fix overflow */
+
+.panel-grid {
+    max-width: 100%;
+    margin-left: 0px!important;
+    margin-right: 0px!important;
+    margin-bottom: 0px!important;
+}
+.panel-grid-cell {
+padding: 30px;
+}
+
+/**
+************* START 100vh bugfix
+*
+* VH and VW units can cause issues on iOS devices: http://caniuse.com/#feat=viewport-units
+*
+* To overcome this, create media queries that target the width, height, and orientation of iOS devices.
+* It isn't optimal, but there is really no other way to solve the problem. In this example, I am fixing
+* the height of element `.between-img-min` —which is a full width and height cover image.
+*
+* iOS Resolution Quick Reference: http://www.iosres.com/
+* https://gist.github.com/pburtchaell/e702f441ba9b3f76f587
+* http://caniuse.com/#feat=viewport-units
+*/
+.between-img-min {
+height: 100vh;
+width: 100vw;
+    background-attachment: fixed;
+}
+ 
+/**
+* iPad with portrait orientation.
+*/
+@media all and (device-width: 768px) and (device-height: 1024px) and (orientation:portrait){
+.between-img-min {
+height: 1024px;
+}
+}
+ 
+/**
+* iPad with landscape orientation.
+*/
+@media all and (device-width: 768px) and (device-height: 1024px) and (orientation:landscape){
+.between-img-min {
+height: 768px;
+}
+}
+ 
+/**
+* iPhone 5
+* You can also target devices with aspect ratio.
+*/
+@media screen and (device-aspect-ratio: 40/71) {
+.between-img-min {
+height: 500px;
+}
+} 
+
+/**
+************* /END 100vh bugfix
+*/
+
+/**
+************* START 50vh bugfix
+*
+* VH and VW units can cause issues on iOS devices: http://caniuse.com/#feat=viewport-units
+*
+* To overcome this, create media queries that target the width, height, and orientation of iOS devices.
+* It isn't optimal, but there is really no other way to solve the problem. In this example, I am fixing
+* the height of element `.between-img-min` —which is a full width and height cover image.
+*
+* iOS Resolution Quick Reference: http://www.iosres.com/
+* https://gist.github.com/pburtchaell/e702f441ba9b3f76f587
+* http://caniuse.com/#feat=viewport-units
+*/
+.between-img-min-50 {
+    height: 50vh;
+    width: 100vw;
+    background-attachment: fixed;
+}
+ 
+/**
+* iPad with portrait orientation.
+*/
+@media all and (device-width: 768px) and (device-height: 1024px) and (orientation:portrait){
+.between-img-min-50 {
+    height: 512px;
+}
+}
+ 
+/**
+* iPad with landscape orientation.
+*/
+@media all and (device-width: 768px) and (device-height: 1024px) and (orientation:landscape){
+.between-img-min-50 {
+    height: 384px;
+}
+}
+ 
+/**
+* iPhone 5
+* You can also target devices with aspect ratio.
+*/
+@media screen and (device-aspect-ratio: 40/71) {
+.between-img-min-50 {
+    height: 250px;
+}
+} 
+
+/**
+************* /END 50vh bugfix
+*/
+
+
+/* img responsivness fix !PROB ugly */
+img {
+    max-width: 100%;
+}
+
+/* Needs fixing: Remove bootstrap .panel */
+
+.panel {
+margin-bottom: 0px;
+background-color: transparent;
+border: none;
+border-radius: 0px;
+-webkit-box-shadow: none;
+box-shadow: none; */
+}
+
+.v-center-cell .panel-grid-cell {
+    position: relative;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+/* Footer design */
+
+.site-footer {
+    padding:100px 0 80px 0;
+    text-align: center;
+    background: #1A1A1A;
+    position: relative;
+}
+
+#home-circle {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    margin-left: -50px;
+    margin-top: -50px;
+    width:100px;
+    height:100px;
+    border-radius: 50%;
+    background: #1A1A1A;
+    color:#d16b19;
+    font-size: 28px;
+    text-align: center;
+    line-height: 90px;
+    z-index: 1;
+
+    -webkit-transition: all .25s ease;
+       -moz-transition: all .25s ease;
+        -ms-transition: all .25s ease;
+         -o-transition: all .25s ease;
+            transition: all .25s ease;
+}
+
+#home-circle:after {
+    content: '';
+    width: 84px;
+    height: 84px;
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    border: 2px solid #d16b19;
+    border-radius: 50%;
+    z-index:0;
+
+    -webkit-transition: all .25s ease;
+       -moz-transition: all .25s ease;
+        -ms-transition: all .25s ease;
+         -o-transition: all .25s ease;
+            transition: all .25s ease;
+}
+
+#home-circle:hover::after {
+    background: #d16b19;
+}
+
+#home-circle:hover {
+    color: #222;
+}
+
+#social-icons {
+    margin:0;
+    padding: 0;
+    list-style: none;
+    margin-bottom: 15px;
+}
+
+#social-icons li {
+    display: inline-block;
+    margin-right: 7px;
+}
