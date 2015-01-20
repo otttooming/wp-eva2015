@@ -4,7 +4,7 @@ Theme URI: http://underscores.me/
 Author: Underscores.me
 Author URI: http://underscores.me/
 Description: Description
-Version: 1.1.1
+Version: 1.1.2
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: bebop
@@ -20,6 +20,20 @@ bebop is based on Underscores http://underscores.me/, (C) 2012-2015 Automattic, 
 Normalizing styles have been helped along thanks to the fine work of
 Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 */
+
+html {
+    position: relative; /* Sticky footer */
+    min-height: 100%;
+}
+
+
+body {
+    margin-bottom: 275px; /* Sticky footer height */
+}
+
+#content {
+    padding-top: 50px; /* Bootstrap nav padding*/
+}
 
 .row.featurette {
     padding: 50px;
@@ -527,7 +541,9 @@ box-shadow: none; */
     padding:100px 0 80px 0;
     text-align: center;
     background: #1A1A1A;
-    position: relative;
+    position: absolute;
+      bottom: 0;
+      width: 100%;
 }
 
 #home-circle {
