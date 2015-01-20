@@ -14,13 +14,38 @@
 		<div class="site-info">
 			
             <div class="container-fluid">
-	                    <ul id="social-icons">
-	                        <li><a href="#"><i class="fa fa-user"></i></a></li>
-	                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-	                        <li><a href="#"><i class="fa fa-envelope"></i></a></li>
-	                    
-	                    </ul>
-	                    <div id="copyright">© COPYRIGHT 2014 Tartu Kutsehariduskeskus.  Kõik õigused säilitatud</div>
+                   
+                    <!-- START Footer widget area-->
+                    
+	                    <div id="footer-sidebar" class="secondary">
+                           
+                            <div id="footer-sidebar1">
+                                <?php
+                                if(is_active_sidebar('footer-sidebar-1')){
+                                dynamic_sidebar('footer-sidebar-1');
+                                }
+                                ?>
+                            </div>
+                            
+                            <div id="footer-sidebar2">
+                                <?php
+                                if(is_active_sidebar('footer-sidebar-2')){
+                                dynamic_sidebar('footer-sidebar-2');
+                                }
+                                ?>
+                            </div>
+                            
+                            <div id="footer-sidebar3">
+                                <?php
+                                if(is_active_sidebar('footer-sidebar-3')){
+                                dynamic_sidebar('footer-sidebar-3');
+                                }
+                                ?>
+                            </div>
+                        </div>
+                        
+                    <!-- /END Footer widget area-->
+                    
 	                    <a id="home-circle" href="#"><i class="fa fa-angle-up"></i></a>
             </div>
             
