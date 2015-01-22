@@ -28,7 +28,7 @@
 
 	<header id="masthead" class="site-header" role="banner">
         <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-            <div class="container-fluid">
+            <div class="container">
                 <!-- Brand and toggle get grouped for better mobile display -->
                 <div class="navbar-header">
                   <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
@@ -50,7 +50,7 @@
                             'container'         => 'div',
                             'container_class'   => 'collapse navbar-collapse',
                             'container_id'      => 'bs-example-navbar-collapse-1',
-                            'menu_class'        => 'nav navbar-nav',
+                            'menu_class'        => 'nav navbar-nav navbar-right',
                             'fallback_cb'       => 'wp_bootstrap_navwalker::fallback',
                             'walker'            => new wp_bootstrap_navwalker())
                         );

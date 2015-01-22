@@ -538,12 +538,16 @@ box-shadow: none; */
 /* Footer design */
 
 .site-footer {
-    padding:100px 0 80px 0;
     text-align: center;
-    background: #1A1A1A;
+    height: 200px;
     position: absolute;
-      bottom: 0;
-      width: 100%;
+    bottom: 0;
+    width: 100%;
+}
+
+.site-info {
+    padding:100px 0 80px 0;
+    background: #1A1A1A;
 }
 
 #home-circle {
@@ -606,4 +610,13 @@ box-shadow: none; */
 #social-icons li {
     display: inline-block;
     margin-right: 7px;
+}
+
+/* Blog feed page styling */
+
+.blog-post {
+    padding:30px;
+    height:260px;
+    background-color: #eee;
+    margin: 10px 0;
 }

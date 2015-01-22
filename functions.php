@@ -225,7 +225,7 @@ function custom_pagination($numpages = '', $pagerange = '', $paged='') {
   $paginate_links = paginate_links($pagination_args);
   
   if ($paginate_links) {
-    echo "<nav class='custom-pagination'>";
+    echo "<nav class='custom-pagination col-lg-12 blog-pagination'>";
       echo "<span class='page-numbers page-num'>Page " . $paged . " of " . $numpages . "</span> ";
       echo $paginate_links;
     echo "</nav>";
