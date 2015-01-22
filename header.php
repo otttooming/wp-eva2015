@@ -59,4 +59,4 @@
         </nav>
 	</header><!-- #masthead -->
 
-	<div id="content" class="container-fluid site-content">
+	<div id="content" class="site-content">
