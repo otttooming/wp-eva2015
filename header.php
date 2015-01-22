@@ -37,9 +37,15 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                   </button>
-                  <a class="navbar-brand" href="<?php echo home_url(); ?>">
-                            <?php bloginfo('name'); ?>
-                        </a>
+
+                        <!-- WP Theme customizer header image function -->
+                        
+                        <?php if ( get_header_image() ) : ?>
+                            <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" class="navbar-brand">
+                                <img src="<?php header_image(); ?>" width="<?php echo esc_attr( get_custom_header()->width ); ?>" height="<?php echo esc_attr( get_custom_header()->height ); ?>" alt="">
+                            </a>
+                        <?php endif; // End header image check. ?>
+                        
                 </div>
 
                     <?php
