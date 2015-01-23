@@ -13,7 +13,7 @@
     
 </div>
 
-<div class="container-fluid text-center blog-content">
+<div class="container-fluid blog-content">
 
     <div class="row">
 
@@ -34,9 +34,19 @@
             <!-- the loop to display blog posts -->
             <?php while ( $custom_query->have_posts() ) : $custom_query->the_post(); ?>
               <article class="loop col-lg-12 blog-post">
-                <h3><a href="<?php the_permalink(); ?>" rel="bookmark" title="Link <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
-                <div class="content">
-                  <?php the_excerpt(); ?>
+                <div class="row">
+                
+                    <!-- Featured image -->
+	                <div class="blog-img-left col-md-4">
+		                <?php the_post_thumbnail('featured-thumb', array('class' => 'alignleft')); ?>
+	                </div>
+	                
+	                <!-- Excerpt from the main blog post -->
+	                <div class="blog-excerpt-content col-md-8">
+	                	<h3><a href="<?php the_permalink(); ?>" rel="bookmark" title="Link <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
+	                    <?php the_excerpt(); ?>
+	                </div>
+	                
                 </div>
               </article>
             <?php endwhile; ?>
