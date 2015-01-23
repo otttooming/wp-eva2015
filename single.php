@@ -7,26 +7,55 @@
 
 get_header(); ?>
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
+<div class="container-fluid single-post-content">
+    
+    <div class="row">
+        
+        <div class="col-lg-12">
+           
+            <?php the_post_thumbnail('full', array('class' => 'img-responsive')); ?>
+            
+            <h1><?php the_title(); ?></h1>
+            
+        </div>
+        
+    </div>
 
-		<?php while ( have_posts() ) : the_post(); ?>
+    <div class="row">
+        
+        <div class="col-md-8">
 
-			<?php get_template_part( 'content', 'single' ); ?>
+            <div id="primary" class="content-area">
+                <main id="main" class="site-main" role="main">
 
-			<?php the_post_navigation(); ?>
+                <?php while ( have_posts() ) : the_post(); ?>
 
-			<?php
-				// If comments are open or we have at least one comment, load up the comment template
-				if ( comments_open() || get_comments_number() ) :
-					comments_template();
-				endif;
-			?>
+                    <?php get_template_part( 'content', 'single' ); ?>
 
-		<?php endwhile; // end of the loop. ?>
+                    <?php the_post_navigation(); ?>
 
-		</main><!-- #main -->
-	</div><!-- #primary -->
+                    <?php
+                        // If comments are open or we have at least one comment, load up the comment template
+                        if ( comments_open() || get_comments_number() ) :
+                            comments_template();
+                        endif;
+                    ?>
 
-<?php get_sidebar(); ?>
+                <?php endwhile; // end of the loop. ?>
+
+                </main><!-- #main -->
+            </div><!-- #primary -->
+
+        </div>
+        
+        <div class="col-md-4">
+           
+            <?php get_sidebar(); ?>
+            
+        </div>
+
+    </div>
+    
+</div>
+        
 <?php get_footer(); ?>

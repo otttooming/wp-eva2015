@@ -38,7 +38,7 @@
                 
                     <!-- Featured image -->
 	                <div class="blog-img-left col-md-4">
-		                <?php the_post_thumbnail('featured-thumb', array('class' => 'alignleft')); ?>
+		                <?php the_post_thumbnail('featured-thumb', array('class' => 'img-responsive')); ?>
 	                </div>
 	                
 	                <!-- Excerpt from the main blog post -->
