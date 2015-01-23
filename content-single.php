@@ -23,7 +23,4 @@
 		?>
 	</div><!-- .entry-content -->
 
-	<footer class="entry-footer">
-		<?php bebop_entry_footer(); ?>
-	</footer><!-- .entry-footer -->
 </article><!-- #post-## -->

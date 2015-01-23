@@ -23,7 +23,7 @@ get_header(); ?>
 
     <div class="row">
         
-        <div class="col-md-8">
+        <div class="col-md-9">
 
             <div id="primary" class="content-area">
                 <main id="main" class="site-main" role="main">
@@ -31,8 +31,24 @@ get_header(); ?>
                 <?php while ( have_posts() ) : the_post(); ?>
 
                     <?php get_template_part( 'content', 'single' ); ?>
+                    
+                    <!-- Post navigation, shows next and previous posts -->
+   
+                    <div class="row text-center">
 
-                    <?php the_post_navigation(); ?>
+                        <div class="col-xs-6 col-sm-6 post-nav-left">
+
+                            <?php next_post_link('%link', '<i class="fa fa-angle-left"></i>'); ?>
+
+                        </div>
+
+                        <div class="col-xs-6 col-sm-6 post-nav-right">
+
+                            <?php previous_post_link('%link', '<i class="fa fa-angle-right"></i>'); ?>
+
+                        </div>
+
+                    </div>
 
                     <?php
                         // If comments are open or we have at least one comment, load up the comment template
@@ -48,7 +64,7 @@ get_header(); ?>
 
         </div>
         
-        <div class="col-md-4">
+        <div class="col-md-3">
            
             <?php get_sidebar(); ?>
             

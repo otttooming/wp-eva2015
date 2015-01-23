@@ -371,11 +371,6 @@ body {
 	height: 100%;
 }
 
-/* DIS comments */
-
-#comments {
-    display: none;
-}
 /* DIS h1 header */
 .entry-title {
     display: none;
@@ -643,4 +638,28 @@ input[type="search"]:focus {
     box-shadow: none;
     outline: 0 none;
     -webkit-appearance: none;
+}
+
+/* Post page nav elements */
+
+.post-nav-left a, .post-nav-right a {
+    display: block;
+    width: 100%;
+height: 100px;
+line-height: 100px;
+padding-left: 20px;
+padding-right: 20px;
+color: #111;
+font-size: 100px;
+text-decoration: none;
+transition: all .5s ease-in-out;
+-moz-transition: all .5s ease-in-out;
+-webkit-transition: all .5s ease-in-out;
+-moz-box-sizing: border-box;
+-webkit-box-sizing: border-box;
+box-sizing: border-box;
+}
+
+.post-nav-left a:hover, .post-nav-right a:hover {
+    color: red;
 }
