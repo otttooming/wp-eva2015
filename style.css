@@ -4,7 +4,7 @@ Theme URI: http://underscores.me/
 Author: Underscores.me
 Author URI: http://underscores.me/
 Description: Description
-Version: 1.1.7
+Version: 1.1.8
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: bebop
@@ -603,4 +603,44 @@ box-shadow: none; */
 .blog-post {
     background-color: #eee;
     margin: 10px 0;
+}
+
+/* Search sidebar - searchform.php */
+
+.widget.widget_search .search-field {
+    -webkit-border-radius: 3px 0 0 3px;
+    -moz-border-radius: 3px 0 0 3px;
+    -o-border-radius: 3px 0 0 3px;
+    border-radius: 3px 0 0 3px;
+    font-size: 16px;
+    padding: 0 10px;
+    float: left;
+    width: 80%;
+    height: 50px;
+    border: none;
+    background-color:#d0d0d0;
+    opacity:1;
+}
+
+.widget.widget_search .search-submit {
+    -webkit-border-radius: 0 3px 3px 0;
+    -moz-border-radius: 0 3px 3px 0;
+    -o-border-radius: 0 3px 3px 0;
+    border-radius: 0 3px 3px 0;
+    border:0;
+    font-size: 16px;
+    font-family: FontAwesome;
+    color: #619c9c;
+    padding: 0;
+    display: inline-block;
+    height: 50px;
+    width: 20%;
+    background-color:#282D31;
+    opacity:1;
+}
+
+input[type="search"]:focus {
+    box-shadow: none;
+    outline: 0 none;
+    -webkit-appearance: none;
 }
