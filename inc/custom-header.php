@@ -26,7 +26,7 @@ function bebop_custom_header_setup() {
 	add_theme_support( 'custom-header', apply_filters( 'bebop_custom_header_args', array(
 		'default-image'          => '',
 		'default-text-color'     => '000000',
-		'width'                  => 100,
+		'width'                  => 365,
 		'height'                 => 100,
 		'flex-height'            => true,
 		'wp-head-callback'       => 'bebop_header_style',

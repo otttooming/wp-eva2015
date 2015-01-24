@@ -32,7 +32,7 @@ body {
 }
 
 #content {
-    padding-top: 50px; /* Bootstrap nav padding*/
+    padding-top: 100px; /* Bootstrap nav padding*/
 }
 
 .row.featurette {
@@ -257,6 +257,17 @@ body {
 
 .dark-section {
     background-color: #333;
+    color: white;
+}
+
+.blue-section {
+    background-color: #0085ca;
+    color: white;
+}
+
+.yellow-section {
+    background-color: #fedb00;
+    color: #333;
 }
 
 /* START Project logo */
@@ -528,7 +539,7 @@ box-shadow: none; */
 
 .site-info {
     padding:100px 0 80px 0;
-    background: #1A1A1A;
+    background: #0033a0;
 }
 
 #home-circle {
@@ -541,7 +552,7 @@ box-shadow: none; */
     width:100px;
     height:100px;
     border-radius: 50%;
-    background: #1A1A1A;
+    background: #0033a0;
     color:#d16b19;
     font-size: 28px;
     text-align: center;
@@ -645,21 +656,42 @@ input[type="search"]:focus {
 .post-nav-left a, .post-nav-right a {
     display: block;
     width: 100%;
-height: 100px;
-line-height: 100px;
-padding-left: 20px;
-padding-right: 20px;
-color: #111;
-font-size: 100px;
-text-decoration: none;
-transition: all .5s ease-in-out;
--moz-transition: all .5s ease-in-out;
--webkit-transition: all .5s ease-in-out;
--moz-box-sizing: border-box;
--webkit-box-sizing: border-box;
-box-sizing: border-box;
+    height: 100px;
+    line-height: 100px;
+    padding-left: 20px;
+    padding-right: 20px;
+    color: #111;
+    font-size: 100px;
+    text-decoration: none;
+    transition: all .5s ease-in-out;
+    -moz-transition: all .5s ease-in-out;
+    -webkit-transition: all .5s ease-in-out;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 .post-nav-left a:hover, .post-nav-right a:hover {
     color: red;
+}
+
+/* Bootstrap navbar customization */
+
+.navbar {
+    min-height: 100px;
+}
+
+.navbar-inverse {
+    background-color: #0033a0;
+}
+
+.navbar-nav>li>a {
+    line-height: 70px;
+}
+.navbar-inverse .navbar-nav>li>a {
+    color: #eee;
+}
+
+.navbar-brand {
+    padding: 0px;
 }
