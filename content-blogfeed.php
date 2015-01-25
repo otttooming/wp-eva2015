@@ -5,8 +5,6 @@
  */
 ?>
 
-<?php get_header(); ?>
-
 <div class="container-fluid text-center blog-header">
 
     <h2>Uudised</h2>
@@ -56,5 +54,3 @@
     </div>
 
 </div>
-
-<?php get_footer(); ?>
