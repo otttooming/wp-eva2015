@@ -7,7 +7,7 @@
 
 get_header(); ?>
 
-<div class="container-fluid single-post-content">
+<div class="container single-post-content">
     
     <div class="row">
         

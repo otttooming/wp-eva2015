@@ -383,7 +383,7 @@ body {
 }
 
 /* DIS h1 header */
-.entry-title {
+.home .entry-title {
     display: none;
 }
 
@@ -614,7 +614,15 @@ box-shadow: none; */
 
 .blog-post {
     background-color: #eee;
-    margin: 10px 0;
+    margin-bottom: 20px;
+}
+
+.blog-excerpt-content {
+padding: 40px;
+}
+
+.blog-view-img-top img {
+min-width: 100%;
 }
 
 /* Search sidebar - searchform.php */
