@@ -4,7 +4,7 @@ Theme URI: http://underscores.me/
 Author: Underscores.me
 Author URI: http://underscores.me/
 Description: Description
-Version: 1.2.3
+Version: 1.2.4
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: bebop
@@ -716,6 +716,31 @@ margin: 30px 0;
 
 .post-nav-left a:hover, .post-nav-right a:hover {
     color: red;
+}
+
+.post-navigation a {
+    display: block;
+padding: 50px;
+    text-decoration: none;
+}
+.post-navigation span {
+display: block;
+} 
+.post-navigation .post-title {
+font-size: 28px;
+    font-family: Bauer;
+}
+
+.post-navigation .nav-previous {
+        background:#fedb00;
+}
+
+.post-navigation .nav-next {
+    background: #0085ca;
+    color: #fff;
+}
+.post-navigation .nav-next a {
+    color: #fff;
 }
 
 /* Bootstrap navbar customization */

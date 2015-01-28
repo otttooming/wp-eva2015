@@ -34,27 +34,21 @@ get_header(); ?>
 	                </div>
                
                
-                <?php while ( have_posts() ) : the_post(); ?>
+                    <?php while ( have_posts() ) : the_post(); ?>
 
-                    <?php get_template_part( 'content', 'single' ); ?>
-                    
+                        <?php get_template_part( 'content', 'single' ); ?>
+
                     <!-- Post navigation, shows next and previous posts -->
-   
-                    <div class="row text-center">
+                    <?php 
+                        the_post_navigation( array(
+                            'next_text' => '<span class="meta-nav" aria-hidden="true">' . __( 'Next', 'bebop' ) . '</span> ' .
+                                '<span class="post-title">%title</span>',
+                            'prev_text' => '<span class="meta-nav" aria-hidden="true">' . __( 'Previous', 'bebop' ) . '</span> ' .
+                                '<span class="post-title">%title</span>',
+                        ) ); 
+                    ?>
+                    <!-- /END Post navigation -->
 
-                        <div class="col-xs-6 col-sm-6 post-nav-left">
-
-                            <?php next_post_link('%link', '<i class="fa fa-angle-left"></i>'); ?>
-
-                        </div>
-
-                        <div class="col-xs-6 col-sm-6 post-nav-right">
-
-                            <?php previous_post_link('%link', '<i class="fa fa-angle-right"></i>'); ?>
-
-                        </div>
-
-                    </div>
 
                     <?php
                         // If comments are open or we have at least one comment, load up the comment template
