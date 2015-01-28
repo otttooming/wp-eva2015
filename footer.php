@@ -60,6 +60,16 @@
 <!-- Latest compiled and minified Bootstrap -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
 
+<!--
+<script type="text/javascript">
+jQuery(document).ready(function($) {
+    $('.carousel').carousel({
+  		interval: 600	
+  	})
+});
+</script>
+-->
+
 <?php wp_footer(); ?>
 
 </body>
