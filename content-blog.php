@@ -11,7 +11,7 @@
                 
                     <!-- Featured image -->
 	                <div class="blog-view-img-top">
-		                <?php the_post_thumbnail('large', array('class' => 'img-responsive')); ?>
+		                <?php the_post_thumbnail('featured-thumb', array('class' => 'img-responsive')); ?>
 	                </div>
 	                
 	                <!-- Excerpt from the main blog post -->

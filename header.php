@@ -20,6 +20,9 @@
 <!-- Font Awesome -->
 <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 
+<!-- Open Sans -->
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css'>
+
 <?php wp_head(); ?>
 </head>
 

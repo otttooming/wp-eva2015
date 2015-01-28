@@ -237,4 +237,4 @@ function custom_pagination($numpages = '', $pagerange = '', $paged='') {
  * Enable support for featured image functionality
  */
 add_theme_support( 'post-thumbnails' );
-add_image_size( 'featured-thumb', 300, 300, true ); //300 pixels wide (and unlimited height)
+add_image_size( 'featured-thumb', 640, 380, true ); //300 pixels wide (and unlimited height)

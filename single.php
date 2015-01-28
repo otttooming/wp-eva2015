@@ -13,9 +13,8 @@ get_header(); ?>
         
         <div class="col-lg-12">
            
-            <?php the_post_thumbnail('full', array('class' => 'img-responsive')); ?>
             
-            <h1><?php the_title(); ?></h1>
+            <h1></h1>
             
         </div>
         
@@ -28,6 +27,13 @@ get_header(); ?>
             <div id="primary" class="content-area">
                 <main id="main" class="site-main" role="main">
 
+               
+                                   <!-- Featured image -->
+	                <div class="blog-view-img-top">
+		                <?php the_post_thumbnail('featured-thumb', array('class' => 'img-responsive')); ?>
+	                </div>
+               
+               
                 <?php while ( have_posts() ) : the_post(); ?>
 
                     <?php get_template_part( 'content', 'single' ); ?>

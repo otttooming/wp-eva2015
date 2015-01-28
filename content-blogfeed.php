@@ -36,7 +36,7 @@
                 <div class="speech-bubble-blue">
 
 	                <!-- Excerpt from the main blog post -->
-	                	<h3><a href="<?php the_permalink(); ?>" rel="bookmark" title="Link <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
+	                	<h2><a href="<?php the_permalink(); ?>" rel="bookmark" title="Link <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
 	                    <?php the_excerpt(); ?>
                   </div>
 

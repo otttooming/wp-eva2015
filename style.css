@@ -4,7 +4,7 @@ Theme URI: http://underscores.me/
 Author: Underscores.me
 Author URI: http://underscores.me/
 Description: Description
-Version: 1.2.1
+Version: 1.2.2
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: bebop
@@ -21,6 +21,12 @@ Normalizing styles have been helped along thanks to the fine work of
 Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 */
 
+@font-face {
+  font-family: 'Bauer';
+  src: 
+    url('fonts/bauer.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
 html {
     position: relative; /* Sticky footer */
     min-height: 100%;
@@ -28,8 +34,25 @@ html {
 
 
 body {
+    font-family: "Open Sans", "Helvetica Neue", Arial, sans-serif;
+
     margin-bottom: 275px; /* Sticky footer height */
 }
+
+
+/* Typography */
+
+
+h1, h2, h3, h4, h5 {
+font-family: Bauer, "Open Sans", "Helvetica Neue", Arial, sans-serif;
+}
+
+p {
+line-height: 200%;
+}
+
+
+/* END Typography */
 
 #content {
     padding-top: 100px; /* Bootstrap nav padding*/
@@ -251,7 +274,7 @@ body {
 
 /* Dark elements */
 
-.dark-text h1, .dark-text h2, .dark-text h3, .dark-text p {
+.dark-text h1, .dark-text h2, .dark-text h3, .dark-text p, .dark-text a {
     color: #fff;
 }
 
@@ -663,6 +686,12 @@ input[type="search"]:focus {
     box-shadow: none;
     outline: 0 none;
     -webkit-appearance: none;
+}
+
+/* Post page */
+
+.entry-meta {
+margin: 30px 0;
 }
 
 /* Post page nav elements */
