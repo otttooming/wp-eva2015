@@ -44,7 +44,7 @@ get_header(); ?>
 
 			<?php endwhile; ?>
 
-			<?php the_posts_navigation(); ?>
+			<?php wp_bootstrap_pagination(); ?>
 
 		<?php else : ?>
 
