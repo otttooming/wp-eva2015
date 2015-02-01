@@ -501,3 +501,106 @@ function register_khk_tudengifirmad() {
 add_action('widgets_init', 'register_khk_tudengifirmad');
 
 
+/**************************************/
+
+
+/**
+ * Student companies
+ *
+ * Create a "Student company" page in WordPress using 
+ * custom post types, taxonomies, and Advanced Custom
+ * Fields
+ */
+
+class StudentCo
+{
+	/**
+	 * Initialize & hook into WP
+	 */
+	public function __construct() {
+		add_action( 'init', array($this, 'register_post_type'), 0 );
+		add_action( 'init', array($this, 'register_taxonomy'), 0 );
+		add_action( 'wp_enqueue_scripts', array($this, 'load_styles'), 101 );
+		add_action( 'admin_notices', array($this, 'admin_notice') );
+		add_action( 'after_setup_theme', array($this, 'after_setup_theme') );
+	}
+	
+	
+	/**
+	 * Theme setup
+	 *
+	 * Create a custom thumbnail size for our team avatars
+	 */
+	public function after_setup_theme() {
+	  add_image_size('studentcompany-thumb', 100, 100, true); // 100px x 100px with hard crop enabled
+	}
+	
+	
+	/**
+	 * Register post type
+	 */
+	public function register_post_type() {
+	   
+	   // Labels
+		$labels = array(
+			'name' => _x("Õpilasfirma", "post type general name"),
+			'singular_name' => _x("Õpilasfirma", "post type singular name"),
+			'menu_name' => 'Õpilasfirmad',
+			'add_new' => _x("Lisa uus", "team item"),
+			'add_new_item' => __("Lisa uus õpilasfirma"),
+			'edit_item' => __("Muuda õpilasfirmat"),
+			'new_item' => __("Uus õpilasfirma"),
+			'view_item' => __("Vaata õpilasfirmat"),
+			'search_items' => __("Otsi õpilasfirmasid"),
+			'not_found' =>  __("Ei leidnud õpilasfirmat"),
+			'not_found_in_trash' => __("Ei leidnud õpilasfirmat prügist"),
+			'parent_item_colon' => ''
+		);
+		
+		// Register "studentcompany" post type
+		register_post_type('studentcompany' , array(
+			'labels' => $labels,
+			'public' => true,
+			'has_archive' => false,
+			'menu_icon' => 'dashicons-groups',
+			'rewrite' => false,
+			'supports' => array('title', 'editor', 'thumbnail')
+		) );
+	}
+	
+	
+	/**
+	 * Register 'osakond' taxonomy
+	 */
+	public function register_taxonomy() {
+		
+		// Labels
+		$singular = 'Osakond';
+		$plural = 'Osakonnad';
+		$labels = array(
+			'name' => _x( $plural, "taxonomy general name"),
+			'singular_name' => _x( $singular, "taxonomy singular name"),
+			'search_items' =>  __("Search $singular"),
+			'all_items' => __("All $singular"),
+			'parent_item' => __("Parent $singular"),
+			'parent_item_colon' => __("Parent $singular:"),
+			'edit_item' => __("Edit $singular"),
+			'update_item' => __("Update $singular"),
+			'add_new_item' => __("Add New $singular"),
+			'new_item_name' => __("New $singular Name"),
+		);
+		// Register taxonomy and attach to 'studentcompany' post type
+		register_taxonomy( strtolower($singular), 'studentcompany', array(
+			'public' => true,
+			'show_ui' => true,
+			'show_in_nav_menus' => true,
+			'hierarchical' => true,
+			'query_var' => true,
+			'rewrite' => false,
+			'labels' => $labels
+		) );
+	}
+	
+}
+$StudentCo = new StudentCo();
+ 
