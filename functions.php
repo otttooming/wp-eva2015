@@ -521,7 +521,6 @@ class StudentCo
 		add_action( 'init', array($this, 'register_post_type'), 0 );
 		add_action( 'init', array($this, 'register_taxonomy'), 0 );
 		add_action( 'wp_enqueue_scripts', array($this, 'load_styles'), 101 );
-		add_action( 'admin_notices', array($this, 'admin_notice') );
 		add_action( 'after_setup_theme', array($this, 'after_setup_theme') );
 	}
 	

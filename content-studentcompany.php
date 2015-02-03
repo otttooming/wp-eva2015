@@ -18,7 +18,7 @@ get_header(); ?>
 <div class="container">
 
     <section class="row profiles">
-        <div class="intro">
+        <div class="intro speech-bubble-blue" style="min-height:0px; margin-left:15px; margin-right:15px;">
             <h2>Tartu Kutsehariduskeskuse tudengifirmad</h2>
             <p class="lead">&ldquo;Individuals can and do make a difference, but it takes a team<br>to really mess things up.&rdquo;</p>
         </div>
@@ -34,28 +34,30 @@ get_header(); ?>
             $thumb_src = $src[0];
         }
         ?>
-        <article class="col-sm-6 profile">
-            <div class="profile-header">
-                <?php if ( $thumb_src ): ?>
-                <img src="<?php echo $thumb_src; ?>" alt="<?php the_title(); ?>, <?php the_field('studentcompany_position'); ?>" class="img-circle">
-                <?php endif; ?>
-            </div>
+        <article class="col-lg-3 col-md-4 col-xs-6">
+            <div class="studentcompany profile text-center">
+                <div class="profile-name">
+                    <h3><?php the_title(); ?></h3>
+                </div>
 
-            <div class="profile-content">
-                <h3><?php the_title(); ?></h3>
-                <p class="lead position"><?php the_field('studentcompany_position'); ?></p>
-                <?php the_content(); ?>
-            </div>
+                <div class="profile-logo">
+                    <?php if ( $thumb_src ): ?>
+                    <img src="<?php echo $thumb_src; ?>" alt="<?php the_title(); ?>, <?php the_field('studentcompany_position'); ?>" class="img-responsive">
+                    <?php endif; ?>
+                </div>
 
-            <div class="profile-footer">
-                <a href="tel:<?php the_field('studentcompany_phone'); ?>"><i class="icon-mobile-phone"></i></a>
-                <a href="mailto:<?php echo antispambot( get_field('studentcompany_email') ); ?>"><i class="icon-envelope"></i></a>
-                <?php if ( $twitter = get_field('studentcompany_twitter') ): ?>
-                <a href="<?php echo $twitter; ?>"><i class="icon-twitter"></i></a>
-                <?php endif; ?>
-                <?php if ( $linkedin = get_field('studentcompany_linkedin') ): ?>
-                <a href="<?php echo $linkedin; ?>"><i class="icon-linkedin"></i></a>
-                <?php endif; ?>
+                <div class="profile-footer">
+                    <p class="lead position"><?php the_field('studentcompany_position'); ?></p>
+                    <?php the_content(); ?>
+                    <a href="tel:<?php the_field('studentcompany_phone'); ?>"><i class="icon-mobile-phone"></i></a>
+                    <a href="mailto:<?php echo antispambot( get_field('studentcompany_email') ); ?>"><i class="icon-envelope"></i></a>
+                    <?php if ( $twitter = get_field('studentcompany_twitter') ): ?>
+                    <a href="<?php echo $twitter; ?>"><i class="fa fa-twitter-square"></i></a>
+                    <?php endif; ?>
+                    <?php if ( $linkedin = get_field('studentcompany_facebook') ): ?>
+                    <a href="<?php echo $linkedin; ?>"><i class="fa fa-facebook-square"></i></a>
+                    <?php endif; ?>
+                </div>
             </div>
         </article><!-- /.profile -->
         <?php endforeach; ?>
