@@ -222,7 +222,7 @@ line-height: 200%;
 
 @media(min-width:992px) {
     .timeline>li {
-        min-height: 150px;
+        min-height: 170px;
     }
 
     .timeline>li .timeline-panel {
@@ -231,7 +231,7 @@ line-height: 200%;
 
     .timeline>li .timeline-image {
         width: 150px;
-        height: 150px;
+        height: 170px;
         margin-left: -75px;
     }
 
@@ -248,7 +248,7 @@ line-height: 200%;
 
 @media(min-width:1200px) {
     .timeline>li {
-        min-height: 170px;
+        min-height: 2000px;
     }
 
     .timeline>li .timeline-panel {
@@ -257,7 +257,7 @@ line-height: 200%;
 
     .timeline>li .timeline-image {
         width: 170px;
-        height: 170px;
+        height: 2000px;
         margin-left: -85px;
     }
 
