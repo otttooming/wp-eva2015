@@ -528,6 +528,7 @@ height: 500px;
 /* img responsivness fix !PROB ugly */
 img {
     max-width: 100%;
+    background-size:cover;
 }
 
 /* Needs fixing: Remove bootstrap .panel */
@@ -576,7 +577,7 @@ box-shadow: none; */
     height:100px;
     border-radius: 50%;
     background: #fedb00;
-    color:#fff;
+    color:black;
     font-size: 28px;
     text-align: center;
     line-height: 90px;
