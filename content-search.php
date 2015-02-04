@@ -8,22 +8,22 @@
  */
 ?>
 
+<!-- Featured image -->
+<div class="blog-view-img-top">
+    <?php the_post_thumbnail('featured-thumb', array('class' => 'img-responsive')); ?>
+</div>
+
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
-		<?php the_title( sprintf( '<h1 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h1>' ); ?>
 
-		<?php if ( 'post' == get_post_type() ) : ?>
-		<div class="entry-meta">
-			<?php bebop_posted_on(); ?>
-		</div><!-- .entry-meta -->
-		<?php endif; ?>
-	</header><!-- .entry-header -->
 
-	<div class="entry-summary">
-		<?php the_excerpt(); ?>
-	</div><!-- .entry-summary -->
+    <header class="entry-header">
+        <?php the_title( sprintf( '<h1 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h1>' ); ?>
 
-	<footer class="entry-footer">
-		<?php bebop_entry_footer(); ?>
-	</footer><!-- .entry-footer -->
+    </header><!-- .entry-header -->
+
+    <div class="entry-summary">
+        <?php the_excerpt(); ?>
+    </div><!-- .entry-summary -->
+
+
 </article><!-- #post-## -->

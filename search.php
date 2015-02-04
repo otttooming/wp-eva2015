@@ -7,9 +7,9 @@
 
 get_header(); ?>
 
-	<section id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
-
+	<section id="primary" class="container content-area">
+		<main id="main" class="row site-main" role="main">
+<div class="col-md-offset-2 col-md-8">
 		<?php if ( have_posts() ) : ?>
 
 			<header class="page-header">
@@ -37,9 +37,18 @@ get_header(); ?>
 			<?php get_template_part( 'content', 'none' ); ?>
 
 		<?php endif; ?>
-
+            </div>
 		</main><!-- #main -->
+		
+		<div class="row">
+				<div class="col-md-offset-2 col-md-8 page-content">
+					<h2>Otsing</h2>
+
+					<?php get_search_form(); ?>
+
+				</div><!-- .page-content -->
+		</div>
+		
 	</section><!-- #primary -->
 
-<?php get_sidebar(); ?>
 <?php get_footer(); ?>

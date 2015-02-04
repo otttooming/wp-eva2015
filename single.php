@@ -28,7 +28,7 @@ get_header(); ?>
                 <main id="main" class="site-main" role="main">
 
                
-                                   <!-- Featured image -->
+                    <!-- Featured image -->
 	                <div class="blog-view-img-top">
 		                <?php the_post_thumbnail('featured-thumb', array('class' => 'img-responsive')); ?>
 	                </div>
