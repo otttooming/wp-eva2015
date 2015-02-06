@@ -18,7 +18,7 @@ get_header(); ?>
 <div class="container">
 
     <section class="row profiles">
-        <div class="intro speech-bubble-blue" style="min-height:0px; margin-left:15px; margin-right:15px;">
+        <div class="intro speech-bubble-yellow" style="min-height:0px; margin-left:15px; margin-right:15px;">
             <h2>Tartu Kutsehariduskeskuse tudengifirmad</h2>
             <p class="lead">&ldquo;Individuals can and do make a difference, but it takes a team<br>to really mess things up.&rdquo;</p>
         </div>
@@ -49,6 +49,8 @@ get_header(); ?>
                 <div class="profile-footer">
                     <p class="lead position"><?php the_field('studentcompany_position'); ?></p>
                     <?php the_content(); ?>
+                </div>
+                <div class="profile-contacts">
                     <a href="tel:<?php the_field('studentcompany_phone'); ?>"><i class="icon-mobile-phone"></i></a>
                     <a href="mailto:<?php echo antispambot( get_field('studentcompany_email') ); ?>"><i class="icon-envelope"></i></a>
                     <?php if ( $twitter = get_field('studentcompany_twitter') ): ?>
