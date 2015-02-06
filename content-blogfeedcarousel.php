@@ -30,10 +30,13 @@
             echo '<div class="speech-bubble-blue">';
                 // the_post_thumbnail('medium');
             $content = get_the_content();
-                            echo '<h2>'.get_the_title().'</h2>';
+
+            echo '<h2><a href="'.get_the_permalink().'" rel="bookmark">'.get_the_title().'</a></h2>';
+
             echo '<p>'.wp_trim_words($content, 20).'</p>';
-                        echo '</div>';
             echo '</div>';
+            echo '</div>';
+            
             if ( $i % 3 == 0 && $i != 10 ) { echo '</div><div class="item">'; }
             endwhile;
                         echo '</div>';

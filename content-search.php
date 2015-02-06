@@ -8,22 +8,19 @@
  */
 ?>
 
-<!-- Featured image -->
-<div class="blog-view-img-top">
-    <?php the_post_thumbnail('featured-thumb', array('class' => 'img-responsive')); ?>
-</div>
+              <article class="loop blog-post">
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+                
+                    <!-- Featured image -->
+	                <div class="blog-view-img-top">
+		                <?php the_post_thumbnail('featured-thumb', array('class' => 'img-responsive')); ?>
+	                </div>
+	                
+	                <!-- Excerpt from the main blog post -->
+	                <div class="blog-excerpt-content">
+	                	<h3><a href="<?php the_permalink(); ?>" rel="bookmark" title="Link <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
+	                    <?php the_excerpt(); ?>
+	                </div>
+	                
 
-
-    <header class="entry-header">
-        <?php the_title( sprintf( '<h1 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h1>' ); ?>
-
-    </header><!-- .entry-header -->
-
-    <div class="entry-summary">
-        <?php the_excerpt(); ?>
-    </div><!-- .entry-summary -->
-
-
-</article><!-- #post-## -->
+              </article>
