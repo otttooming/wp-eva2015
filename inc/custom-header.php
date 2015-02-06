@@ -28,7 +28,7 @@ function bebop_custom_header_setup() {
 		'default-text-color'     => '000000',
 		'width'                  => 365,
 		'height'                 => 100,
-		'flex-height'            => true,
+		'flex-height'            => false,
 		'wp-head-callback'       => 'bebop_header_style',
 		'admin-head-callback'    => 'bebop_admin_header_style',
 		'admin-preview-callback' => 'bebop_admin_header_image',
