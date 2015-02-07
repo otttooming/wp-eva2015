@@ -30,7 +30,7 @@
 <div id="page" class="hfeed site">
 
 	<header id="masthead" class="site-header" role="banner">
-        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <nav id="navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
             <div class="container">
                 <!-- Brand and toggle get grouped for better mobile display -->
                 <div class="navbar-header">
@@ -68,4 +68,4 @@
         </nav>
 	</header><!-- #masthead -->
 
-	<div id="content" class="site-content">
+	<div id="content" class="site-content navbar-padding">
