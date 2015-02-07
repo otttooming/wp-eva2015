@@ -53,50 +53,6 @@
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 
-
-<!-- Latest compiled and minified JavaScript -->
-<script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
-
-<!-- Latest compiled and minified Bootstrap -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
-
-<!--
-<script type="text/javascript">
-jQuery(document).ready(function($) {
-    $('.carousel').carousel({
-  		interval: 600	
-  	})
-});
-</script>
--->
-
-<!-- Navbar is fixed when viewport is equal to Bootstrap "lg" environment -->
-<script type="text/javascript">
-    $(document).ready(function () {    
-        var bsEnv = findBootstrapEnvironment();    
-        if(bsEnv != 'lg') {
-            $('#navbar').removeClass('navbar-fixed-top');
-            $('#content').removeClass('navbar-padding');
-         }
-    });
-
-    function findBootstrapEnvironment() {    
-        var envs = ['xs', 'sm', 'md', 'lg'];
-        $el = $('<div>');
-        $el.appendTo($('body'));
-
-        for (var i = envs.length - 1; i >= 0; i--) {
-            var env = envs[i];
-
-            $el.addClass('hidden-'+env);
-            if ($el.is(':hidden')) {
-                $el.remove();
-                return env
-            }
-        };
-    }
-</script>
-
 <?php wp_footer(); ?>
 
 </body>
