@@ -36,6 +36,7 @@ html {
 body {
     font-family: "Open Sans", "Helvetica Neue", Arial, sans-serif;
     margin-bottom: 275px; /* Sticky footer height */
+    overflow-x: hidden;
 }
 
 
@@ -424,7 +425,7 @@ a:hover, a:focus {
     margin-bottom: 0px!important;
 }
 .panel-grid-cell {
-padding: 30px;
+padding: 30px!important; /* UGLY */
 }
 
 /**
@@ -441,38 +442,20 @@ padding: 30px;
 * http://caniuse.com/#feat=viewport-units
 */
 .between-img-min {
-height: 100vh;
-width: 100vw;
+    height: 100vh;
     background-attachment: fixed;
+    background-position: center;
 }
  
 /**
 * iPad with portrait orientation.
 */
-@media all and (device-width: 768px) and (device-height: 1024px) and (orientation:portrait){
+@media (max-width: 768px){
 .between-img-min {
-height: 1024px;
+    background-attachment: inherit;
 }
 }
  
-/**
-* iPad with landscape orientation.
-*/
-@media all and (device-width: 768px) and (device-height: 1024px) and (orientation:landscape){
-.between-img-min {
-height: 768px;
-}
-}
- 
-/**
-* iPhone 5
-* You can also target devices with aspect ratio.
-*/
-@media screen and (device-aspect-ratio: 40/71) {
-.between-img-min {
-height: 500px;
-}
-} 
 
 /**
 ************* /END 100vh bugfix
@@ -493,36 +476,19 @@ height: 500px;
 */
 .between-img-min-50 {
     height: 50vh;
-    width: 100vw;
     background-attachment: fixed;
+    background-position: center;
 }
  
 /**
 * iPad with portrait orientation.
 */
-@media all and (device-width: 768px) and (device-height: 1024px) and (orientation:portrait){
+@media (max-width: 768px){
 .between-img-min-50 {
-    height: 512px;
+    background-attachment: inherit;
 }
-}
+
  
-/**
-* iPad with landscape orientation.
-*/
-@media all and (device-width: 768px) and (device-height: 1024px) and (orientation:landscape){
-.between-img-min-50 {
-    height: 384px;
-}
-}
- 
-/**
-* iPhone 5
-* You can also target devices with aspect ratio.
-*/
-@media screen and (device-aspect-ratio: 40/71) {
-.between-img-min-50 {
-    height: 250px;
-}
 } 
 
 /**
@@ -784,6 +750,13 @@ input[type="search"]:focus {
 
 .navbar-toggle {
     margin-top: 30px;
+}
+
+@media (max-width:480px) {
+    .navbar-brand {
+        width: 75%;
+        margin-top: 10px;
+    }
 }
 
 /* School speech bubble. Official colors from pantenon conversion, must check for accuracy */

@@ -134,7 +134,7 @@ function bebop_scripts() {
     wp_enqueue_style( 'bebop-style', get_stylesheet_uri() );
     
     wp_deregister_script('jquery'); // Remove WordPress core's jQuery
-    wp_register_script('jquery', '//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js', false, null, false);
+    wp_enqueue_script('jquery', '//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js', false, null, false);
     
 	wp_enqueue_script( 'bootstrap-js', get_template_directory_uri() . '/js/bootstrap.min.js', array(), '20150206', true );
     
