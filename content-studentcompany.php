@@ -34,7 +34,7 @@ get_header(); ?>
             $thumb_src = $src[0];
         }
         ?>
-        <article class="col-lg-3 col-md-4 col-xs-6">
+        <article class="col-md-4 col-xs-6">
             <div class="studentcompany profile text-center">
                 <div class="profile-name">
                     <h3><?php the_title(); ?></h3>
