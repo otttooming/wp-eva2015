@@ -51,13 +51,13 @@ get_header(); ?>
                     <?php the_content(); ?>
                 </div>
                 <div class="profile-contacts">
-                    <a href="tel:<?php the_field('studentcompany_phone'); ?>"><i class="icon-mobile-phone"></i></a>
-                    <a href="mailto:<?php echo antispambot( get_field('studentcompany_email') ); ?>"><i class="icon-envelope"></i></a>
+                    <a href="tel:<?php the_field('studentcompany_phone'); ?>"><i class="fa fa-phone-square"></i></a>
+                    <a href="mailto:<?php echo antispambot( get_field('studentcompany_email') ); ?>"><i class="fa fa-envelope"></i></a>
                     <?php if ( $twitter = get_field('studentcompany_twitter') ): ?>
                     <a href="<?php echo $twitter; ?>"><i class="fa fa-twitter-square"></i></a>
                     <?php endif; ?>
-                    <?php if ( $linkedin = get_field('studentcompany_facebook') ): ?>
-                    <a href="<?php echo $linkedin; ?>"><i class="fa fa-facebook-square"></i></a>
+                    <?php if ( $facebook = get_field('studentcompany_facebook') ): ?>
+                    <a href="<?php echo $facebook; ?>"><i class="fa fa-facebook-square"></i></a>
                     <?php endif; ?>
                 </div>
             </div>
