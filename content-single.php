@@ -9,7 +9,7 @@
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 
 		<div class="entry-meta">
-			<i class="fa fa-calendar-o"></i><?php bebop_posted_on(); ?>
+			<?php bebop_posted_on(); ?>
 		</div><!-- .entry-meta -->
 	</header><!-- .entry-header -->
 

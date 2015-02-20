@@ -254,8 +254,8 @@ add_image_size( 'featured-thumb', 640, 380, true ); //300 pixels wide (and unlim
 /**
  *
  * Puts featured image as background for Next and Previous post navigation at bottom of single posts
- *
  */
+
 
 function bebop_post_nav_background() {
 	if ( ! is_single() ) {
@@ -291,7 +291,7 @@ function bebop_post_nav_background() {
 	wp_add_inline_style( 'bebop-style', $css );
 }
 add_action( 'wp_enqueue_scripts', 'bebop_post_nav_background' );
-
+ 
 
 /**
  * WordPress Bootstrap Pagination

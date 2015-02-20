@@ -23,6 +23,7 @@ get_header(); ?>
             <p class="lead">&ldquo;Individuals can and do make a difference, but it takes a team<br>to really mess things up.&rdquo;</p>
         </div>
 
+        <?php $clearfix_counter = 1 ?><!-- Add Bootstrap clearfix for elements with uneven height -->
         <?php 
         foreach ( $studentcompany_posts as $post ): 
         setup_postdata($post);
@@ -62,6 +63,10 @@ get_header(); ?>
                 </div>
             </div>
         </article><!-- /.profile -->
+        <!-- Add Bootstrap clearfix for elements with uneven height -->
+        <?php if ($clearfix_counter % 2  == 0) echo '<div class="clearfix visible-xs-block visible-sm-block"></div>'; ?>
+        <?php if ($clearfix_counter % 3  == 0) echo '<div class="clearfix visible-md-block visible-lg-block"></div>'; ?>
+        <?php $clearfix_counter++; ?>
         <?php endforeach; ?>
     </section><!-- /.row -->
 </div>
