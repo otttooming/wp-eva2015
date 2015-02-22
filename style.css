@@ -448,7 +448,7 @@ padding: 30px!important; /* UGLY */
 */
 .between-img-min {
     height: 100vh;
-    background-attachment: fixed;
+    /*background-attachment: fixed;*/
     background-position: center;
 }
  
@@ -481,7 +481,7 @@ padding: 30px!important; /* UGLY */
 */
 .between-img-min-50 {
     height: 50vh;
-    background-attachment: fixed;
+    /*background-attachment: fixed;*/
     background-position: center;
 }
  
@@ -932,10 +932,34 @@ z-index: 1;
 }
 .profile i {
     font-size: 35px;
+    color: white;
+    line-height: 50px;
 }
 
-.profile-contacts {
+.profile-contacts a {
+    opacity: 0.1;
 }
+
+.profile-contacts a:hover {
+    opacity: 1;
+    -webkit-transition: all 750ms ease;
+    -moz-transition: all 750ms ease;
+    transition: all 750ms ease;
+}
+
+.profile-contacts .phone {
+    background-color: #97d700;
+}
+
+.profile-contacts .mail {
+    background-color: #c8102e;
+}
+
+.profile-contacts .facebook {
+    background-color: #0085ca;
+}
+
+
 
 #comments {
     background-color: white;
