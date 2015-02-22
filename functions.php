@@ -130,6 +130,8 @@ add_action( 'widgets_init', 'bebop_widgets_init' );
 function bebop_scripts() {
     
     wp_enqueue_style( 'bootstrap', get_template_directory_uri() . '/css/bootstrap.min.css', array(), '20150206' );
+    
+    wp_enqueue_style( 'flaticon', get_template_directory_uri() . '/css/flaticon.css', array(), '20150222' );
 
     wp_enqueue_style( 'bebop-style', get_stylesheet_uri() );
     
