@@ -7,8 +7,12 @@
 
 <div class="container-fluid text-center blog-header hidden-xs speech-bubble-yellow" style="min-height:0px;">
 
-    <h2>Uudised</h2>
+    <h2>Viimased uudised</h2>
+    <a href="<?php echo get_bloginfo('url') ?>/uudised">
     
+        <button type="button" class="btn-transparent">Vaata kõiki uudised</button>
+    
+    </a>
 </div>
 
 <div class="container-fluid hidden-xs" style="margin:-15px 0;">
@@ -26,20 +30,20 @@
             if ( $i == 1 ) {
                 echo '<div class="item active">';
             }
-                        echo '<div class="col-sm-4">';
-            echo '<div class="speech-bubble-blue">';
-                // the_post_thumbnail('medium');
-            $content = get_the_content();
+                echo '<div class="col-sm-4">';
+                    echo '<div class="speech-bubble-blue">';
+                    // the_post_thumbnail('medium');
+                    $content = get_the_content();
 
-            echo '<h2><a href="'.get_the_permalink().'" rel="bookmark">'.get_the_title().'</a></h2>';
-
-            echo '<p>'.wp_trim_words($content, 20).'</p>';
-            echo '</div>';
-            echo '</div>';
+                    echo '<h2><a href="'.get_the_permalink().'" rel="bookmark">'.get_the_title().'</a></h2>';
+                    echo '<div class="entry-meta">' .bebop_posted_on(). '</div>';
+                    echo '<p>'.wp_trim_words($content, 20).'</p>';
+                    echo '</div>';
+                echo '</div>';
             
             if ( $i % 3 == 0 && $i != 10 ) { echo '</div><div class="item">'; }
             endwhile;
-                        echo '</div>';
+            echo '</div>';
             wp_reset_postdata();
             endif;
             ?>
