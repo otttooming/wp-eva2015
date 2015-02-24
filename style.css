@@ -1009,5 +1009,23 @@ z-index: 1;
 
 .promo-img {
     margin: -30px;
-    min-height: 500px;
+    min-height: 300px;
+}
+
+@media (max-width: 768px){
+    .promo-img {
+    /* display: none; */
+    }
+}
+
+.v-center {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
 }

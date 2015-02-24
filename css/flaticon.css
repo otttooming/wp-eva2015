@@ -14,15 +14,40 @@
     font-size: 150px;
     font-style: normal;
     margin-left: 20px;
-}.flaticon-business112:before {
+}
+
+
+.flaticon-agreement:before {
 	content: "\e000";
 }
-.flaticon-47:before {
+.flaticon-business112:before {
 	content: "\e001";
 }
-.flaticon-45:before {
+.flaticon-businessman116:before {
 	content: "\e002";
 }
+.flaticon-47:before {
+	content: "\e003";
+}
+.flaticon-human74:before {
+	content: "\e004";
+}
+.flaticon-industry2:before {
+	content: "\e005";
+}
+.flaticon-45:before {
+	content: "\e006";
+}
+.flaticon-man27:before {
+	content: "\e007";
+}
+.flaticon-man316:before {
+	content: "\e008";
+}
+.flaticon-451:before {
+	content: "\e009";
+}
+
 
 
 .home i {
