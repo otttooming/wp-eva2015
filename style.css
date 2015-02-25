@@ -437,7 +437,7 @@ a:hover, a:focus {
     margin-bottom: 0px!important;
 }
 .panel-grid-cell {
-padding: 30px!important; /* UGLY */
+    padding: 30px!important; /* UGLY */
 }
 
 /**
@@ -463,9 +463,11 @@ padding: 30px!important; /* UGLY */
 * iPad with portrait orientation.
 */
 @media (max-width: 768px){
-.between-img-min {
-    background-attachment: inherit;
-}
+    
+    .between-img-min {
+        background-attachment: inherit;
+    }
+    
 }
  
 
@@ -940,6 +942,10 @@ z-index: 1;
     border-color: #0085ca transparent;
     display: block;
     width: 0;
+}
+
+.studentcompany .profile-logo img {
+    width: 100%;
 }
 
 .profile-footer {

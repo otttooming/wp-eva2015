@@ -35,7 +35,7 @@ get_header(); ?>
             $thumb_src = $src[0];
         }
         ?>
-        <article class="col-md-4 col-xs-6">
+        <article class="col-xs-6 col-sm-6 col-md-4">
             <div class="studentcompany profile text-center">
                 <div class="profile-name">
                     <h3><?php the_title(); ?></h3>
@@ -53,10 +53,10 @@ get_header(); ?>
                 </div>
                 <div class="profile-contacts container-fluid">
                    <div class="row">
-                        <a href="tel:<?php the_field('studentcompany_phone'); ?>" class="col-md-4 phone"><i class="fa fa-phone-square"></i></a>
-                        <a href="mailto:<?php echo antispambot( get_field('studentcompany_email') ); ?>" class="col-md-4 mail"><i class="fa fa-envelope-square"></i></a>
+                        <a href="tel:<?php the_field('studentcompany_phone'); ?>" class="col-xs-4 phone"><i class="fa fa-phone-square"></i></a>
+                        <a href="mailto:<?php echo antispambot( get_field('studentcompany_email') ); ?>" class="col-xs-4 mail"><i class="fa fa-envelope-square"></i></a>
                         <?php if ( $facebook = get_field('studentcompany_facebook') ): ?>
-                        <a href="<?php echo $facebook; ?>" class="col-md-4 facebook"><i class="fa fa-facebook-square"></i></a>
+                        <a href="<?php echo $facebook; ?>" class="col-xs-4 facebook"><i class="fa fa-facebook-square"></i></a>
                         <?php endif; ?>
                     </div>
                 </div>
